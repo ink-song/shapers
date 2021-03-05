@@ -3,7 +3,7 @@
 export default {
   srcDir: '.',
   exclude: ['LICENSE'],
-  root: '/pagic_template_docs/',
+  root: '/shapers/',
 
   theme: 'docs',
   plugins: ['sidebar', 'prev_next'],
@@ -17,7 +17,7 @@ export default {
   nav: [
     {
       text: 'Docs',
-      link: '/pagic_template_docs/introduction/index.html',
+      link: '/shapers/introduction/index.html',
     },
     {
       text: 'Pagic',
@@ -25,11 +25,11 @@ export default {
     },
     {
       text: 'About',
-      link: '/pagic_template_docs/about/index.html',
+      link: '/shapers/about/index.html',
       align: 'right',
     },
   ],
-  github: 'https://github.com/xcatliu/pagic_template_docs',
+  github: 'https://github.com/xcatliu/shapers',
   sidebar: {
     '/': [
       'introduction/README.md',
