@@ -1,4 +1,4 @@
-import projectConfig from '/pagic_template_docs/pagic.config.js';
+import projectConfig from '/shapers/pagic.config.js';
 export default {
     'prev': {
         "text": "Introduction",
@@ -21,7 +21,7 @@ export default {
     'script': React.createElement(React.Fragment, null,
         React.createElement("script", { src: "https://cdn.pagic.org/react@16.13.1/umd/react.production.min.js" }),
         React.createElement("script", { src: "https://cdn.pagic.org/react-dom@16.13.1/umd/react-dom.production.min.js" }),
-        React.createElement("script", { src: "/pagic_template_docs/index.js", type: "module" })),
+        React.createElement("script", { src: "/shapers/index.js", type: "module" })),
     'contentTitle': React.createElement("h1", { key: "0" }, "Test pages"),
     'contentBody': React.createElement("article", { dangerouslySetInnerHTML: {
             __html: '<p>The test pages.</p>'

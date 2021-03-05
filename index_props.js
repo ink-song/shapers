@@ -1,4 +1,4 @@
-import projectConfig from '/pagic_template_docs/pagic.config.js';
+import projectConfig from '/shapers/pagic.config.js';
 export default {
     'prev': undefined,
     'next': undefined,
@@ -15,7 +15,7 @@ export default {
     'script': React.createElement(React.Fragment, null,
         React.createElement("script", { src: "https://cdn.pagic.org/react@16.13.1/umd/react.production.min.js" }),
         React.createElement("script", { src: "https://cdn.pagic.org/react-dom@16.13.1/umd/react-dom.production.min.js" }),
-        React.createElement("script", { src: "/pagic_template_docs/index.js", type: "module" })),
+        React.createElement("script", { src: "/shapers/index.js", type: "module" })),
     'contentTitle': React.createElement("h1", { key: "0" }, "Pagic template docs"),
     'contentBody': React.createElement("article", { dangerouslySetInnerHTML: {
             __html: '<p>Use this template to create a <a href="https://pagic.org">Pagic</a> site with the <em>docs</em> theme.</p>\n<h2 id="1-click-the-use-this-template-button-in-this-repo">1. Click the <em>Use this template</em> button in <a href="https://github.com/xcatliu/pagic_template_docs">this repo</a><a class="anchor" href="#1-click-the-use-this-template-button-in-this-repo">§</a></h2>\n<p><img src="./assets/1.png" alt="Step 1"></p>\n<h2 id="2-enter-the-repository-name-and-click-the-create-repository-from-template-button">2. Enter the <em>Repository name</em> and click the <em>Create repository from template</em> button<a class="anchor" href="#2-enter-the-repository-name-and-click-the-create-repository-from-template-button">§</a></h2>\n<p><img src="./assets/2.png" alt="Step 2"></p>\n<h2 id="3-edit-pagicconfigts-file-replace-pagic_template_docs-by-the-repository-name">3. Edit <code>pagic.config.ts</code> file, replace <code>pagic_template_docs</code> by the <em>Repository name</em><a class="anchor" href="#3-edit-pagicconfigts-file-replace-pagic_template_docs-by-the-repository-name">§</a></h2>\n<p><img src="./assets/3.png" alt="Step 3"></p>\n<h2 id="4-go-to-settings--options--github-pages-and-set-branch-to-gh-pages">4. Go to <em>Settings</em> &gt; <em>Options</em> &gt; <em>GitHub Pages</em> and set Branch to gh-pages<a class="anchor" href="#4-go-to-settings--options--github-pages-and-set-branch-to-gh-pages">§</a></h2>\n<p><img src="./assets/4.png" alt="Step 4"></p>'
