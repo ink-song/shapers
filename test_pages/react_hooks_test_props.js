@@ -30,7 +30,7 @@ export default {
                 'LICENSE',
                 'dist'
             ],
-            github: 'https://github.com/xcatliu/shapers',
+            github: 'https://github.com/ink-sonng/shaper',
             include: undefined,
             nav: [
                 {

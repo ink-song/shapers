@@ -7,11 +7,6 @@ export default {
     plugins: ['sidebar', 'prev_next'],
     title: 'Pagic template docs',
     description: 'Use this template to create a Pagic site with the docs theme',
-    // To use jsx syntax, please rename this file to pagic.config.tsx
-    // head: <>
-    //   <link rel="icon" type="image/png" href="/favicon.png" />
-    //   <script src="/assets/custom.js" />
-    // </>,
     nav: [
         {
             text: 'Docs',
@@ -27,7 +22,7 @@ export default {
             align: 'right',
         },
     ],
-    github: 'https://github.com/xcatliu/shapers',
+    github: 'https://github.com/ink-sonng/shaper',
     sidebar: {
         '/': [
             'introduction/README.md',
