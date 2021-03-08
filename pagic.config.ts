@@ -24,7 +24,7 @@ export default {
       align: 'right',
     },
   ],
-  github: 'https://github.com/ink-sonng/shaper',
+  github: 'https://github.com/ink-song/shapers.githup.io',
   sidebar: {
     '/': [
       'introduction/README.md',
