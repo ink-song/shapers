@@ -30,7 +30,7 @@ export default {
                 'LICENSE',
                 'dist'
             ],
-            github: 'https://github.com/ink-sonng/shaper',
+            github: 'https://github.com/ink-song/shapers.githup.io',
             include: undefined,
             nav: [
                 {
