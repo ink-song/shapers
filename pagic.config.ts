@@ -2,21 +2,16 @@
 
 export default {
   srcDir: '.',
-  exclude: ['LICENSE'],
+  exclude: [],
   root: '/shapers/',
-
   theme: 'docs',
-  plugins: ['sidebar', 'prev_next'],
-  title: 'Pagic template docs',
-  description: 'Use this template to create a Pagic site with the docs theme',
+  plugins: ['clean', 'init', 'md', 'tsx', 'sidebar', 'prev_next', 'ga', 'script', 'layout', 'out'],
+  title: "Shaper's Docs",
+  description: "Shaper's Docs",
   nav: [
     {
-      text: 'Docs',
+      text: "It's me",
       link: '/shapers/introduction/index.html',
-    },
-    {
-      text: 'Pagic',
-      link: 'https://pagic.org/',
     },
     {
       text: 'About',
