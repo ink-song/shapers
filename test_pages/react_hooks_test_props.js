@@ -16,7 +16,7 @@ export default {
     'title': "React hooks test",
     'content': React.createElement(ReactHooksTest, { config: {
             branch: 'main',
-            description: 'Use this template to create a Pagic site with the docs theme',
+            description: 'Shaper\'s Docs',
             exclude: [
                 '**/.*',
                 '**/package.json',
@@ -27,7 +27,6 @@ export default {
                 '**/config.gypi',
                 '**/CVS',
                 '**/npm-debug.log',
-                'LICENSE',
                 'dist'
             ],
             github: 'https://github.com/ink-song/shapers.githup.io',
@@ -35,11 +34,7 @@ export default {
             nav: [
                 {
                     link: '/shapers/introduction/index.html',
-                    text: 'Docs'
-                },
-                {
-                    link: 'https://pagic.org/',
-                    text: 'Pagic'
+                    text: 'It\'s me'
                 },
                 {
                     align: 'right',
@@ -57,7 +52,8 @@ export default {
                 'layout',
                 'out',
                 'sidebar',
-                'prev_next'
+                'prev_next',
+                'ga'
             ],
             port: 8000,
             root: '/shapers/',
@@ -87,7 +83,7 @@ export default {
             },
             srcDir: '.',
             theme: 'docs',
-            title: 'Pagic template docs',
+            title: 'Shaper\'s Docs',
             tools: {
                 backToTop: true,
                 editOnGitHub: true
@@ -125,7 +121,7 @@ export default {
                 }
             ],
             "pagePath": "test_pages/README.md",
-            "text": "Test pages"
+            "text": "Vue3 + Ts"
         },
         {
             "text": "Folder",

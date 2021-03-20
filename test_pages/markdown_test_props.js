@@ -2,7 +2,7 @@ import projectConfig from '/shapers/pagic.config.js';
 export default {
     'prev': {
         "link": "test_pages/index.html",
-        "text": "Test pages"
+        "text": "Vue3 + Ts"
     },
     'next': {
         "text": "Front matter test",
@@ -85,7 +85,7 @@ export default {
                 }
             ],
             "pagePath": "test_pages/README.md",
-            "text": "Test pages"
+            "text": "Vue3 + Ts"
         },
         {
             "text": "Folder",

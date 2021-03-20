@@ -61,7 +61,7 @@ export default {
                 }
             ],
             "pagePath": "test_pages/README.md",
-            "text": "Test pages"
+            "text": "Vue3 + Ts"
         },
         {
             "text": "Folder",
