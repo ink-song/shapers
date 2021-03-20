@@ -6,9 +6,9 @@ export default {
     'pagePath': "README.md",
     'layoutPath': "_layout.tsx",
     'outputPath': "index.html",
-    'title': "Pagic template docs",
+    'title': undefined,
     'content': React.createElement("article", { dangerouslySetInnerHTML: {
-            __html: '<h1>Pagic template docs</h1>\n<p>Use this template to create a <a href="https://pagic.org">Pagic</a> site with the <em>docs</em> theme.</p>\n<h2 id="1-click-the-use-this-template-button-in-this-repo">1. Click the <em>Use this template</em> button in <a href="https://github.com/xcatliu/pagic_template_docs">this repo</a><a class="anchor" href="#1-click-the-use-this-template-button-in-this-repo">§</a></h2>\n<h2 id="2-enter-the-repository-name-and-click-the-create-repository-from-template-button">2. Enter the <em>Repository name</em> and click the <em>Create repository from template</em> button<a class="anchor" href="#2-enter-the-repository-name-and-click-the-create-repository-from-template-button">§</a></h2>\n<h2 id="3-edit-pagicconfigts-file-replace-pagic_template_docs-by-the-repository-name">3. Edit <code>pagic.config.ts</code> file, replace <code>pagic_template_docs</code> by the <em>Repository name</em><a class="anchor" href="#3-edit-pagicconfigts-file-replace-pagic_template_docs-by-the-repository-name">§</a></h2>\n<h2 id="4-go-to-settings--options--github-pages-and-set-branch-to-gh-pages">4. Go to <em>Settings</em> &gt; <em>Options</em> &gt; <em>GitHub Pages</em> and set Branch to gh-pages<a class="anchor" href="#4-go-to-settings--options--github-pages-and-set-branch-to-gh-pages">§</a></h2>\n<p><img src="" alt="Step 4"></p>'
+            __html: ''
         } }),
     'head': React.createElement(React.Fragment, null,
         React.createElement("link", { crossOrigin: "anonymous", href: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css", integrity: "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X", rel: "stylesheet" })),
@@ -16,28 +16,20 @@ export default {
         React.createElement("script", { src: "https://cdn.pagic.org/react@16.13.1/umd/react.production.min.js" }),
         React.createElement("script", { src: "https://cdn.pagic.org/react-dom@16.13.1/umd/react-dom.production.min.js" }),
         React.createElement("script", { src: "/shapers/index.js", type: "module" })),
-    'contentTitle': React.createElement("h1", { key: "0" }, "Pagic template docs"),
+    'contentTitle': undefined,
     'contentBody': React.createElement("article", { dangerouslySetInnerHTML: {
-            __html: '<p>Use this template to create a <a href="https://pagic.org">Pagic</a> site with the <em>docs</em> theme.</p>\n<h2 id="1-click-the-use-this-template-button-in-this-repo">1. Click the <em>Use this template</em> button in <a href="https://github.com/xcatliu/pagic_template_docs">this repo</a><a class="anchor" href="#1-click-the-use-this-template-button-in-this-repo">§</a></h2>\n<h2 id="2-enter-the-repository-name-and-click-the-create-repository-from-template-button">2. Enter the <em>Repository name</em> and click the <em>Create repository from template</em> button<a class="anchor" href="#2-enter-the-repository-name-and-click-the-create-repository-from-template-button">§</a></h2>\n<h2 id="3-edit-pagicconfigts-file-replace-pagic_template_docs-by-the-repository-name">3. Edit <code>pagic.config.ts</code> file, replace <code>pagic_template_docs</code> by the <em>Repository name</em><a class="anchor" href="#3-edit-pagicconfigts-file-replace-pagic_template_docs-by-the-repository-name">§</a></h2>\n<h2 id="4-go-to-settings--options--github-pages-and-set-branch-to-gh-pages">4. Go to <em>Settings</em> &gt; <em>Options</em> &gt; <em>GitHub Pages</em> and set Branch to gh-pages<a class="anchor" href="#4-go-to-settings--options--github-pages-and-set-branch-to-gh-pages">§</a></h2>\n<p><img src="" alt="Step 4"></p>'
+            __html: ''
         } }),
-    'toc': React.createElement("nav", { key: "0", className: "toc" },
-        React.createElement("ol", null,
-            React.createElement("li", null,
-                React.createElement("a", { href: "#1-click-the-use-this-template-button-in-this-repo" }, "1. Click the Use this template button in this repo")),
-            React.createElement("li", null,
-                React.createElement("a", { href: "#2-enter-the-repository-name-and-click-the-create-repository-from-template-button" }, "2. Enter the Repository name and click the Create repository from template button")),
-            React.createElement("li", null,
-                React.createElement("a", { href: "#3-edit-pagicconfigts-file-replace-pagic_template_docs-by-the-repository-name" }, "3. Edit pagic.config.ts file, replace pagic_template_docs by the Repository name")),
-            React.createElement("li", null,
-                React.createElement("a", { href: "#4-go-to-settings--options--github-pages-and-set-branch-to-gh-pages" }, `4. Go to Settings > Options > GitHub Pages and set Branch to gh-pages`)))),
+    'toc': null,
     'author': "ink-song",
     'contributors': [
-        "ink-song"
+        "ink-song",
+        "shaper"
     ],
     'date': "2021-03-05T01:33:36.000Z",
-    'updated': null,
-    'excerpt': "Use this template to create a Pagic site with the docs theme. 1. Click the Use this template button in this repo 2. Enter the Repository name and click the Create repository from template button 3. Edit pagic.c...",
-    'cover': "",
+    'updated': "2021-03-20T02:50:58.000Z",
+    'excerpt': "",
+    'cover': undefined,
     'sidebar': [
         {
             "text": "Introduction",
