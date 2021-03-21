@@ -1,3 +1,3 @@
-# Vue3 + Ts
+# Technology
 
 The test pages.

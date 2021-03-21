@@ -1,10 +1,17 @@
-# Markdown test
+# Vue3 + TypeScript
 
-This page contains the features about markdown supported by Pagic.
+使用Vue3+ TypeScript打造一个企业级组件库
 
-## GitHub flavored markdown
+## 课程安排
 
-The followed content is copied from https://guides.github.com/features/mastering-markdown/
+1. 项目结构
+2. 开发模式讲解
+3. Vue3的定义
+4. 单元测试
+5. 高泛用性的API
+6. 响应式原理
+7. 完善功能开发
+8. 自动化发布流程
 
 ### Text
 

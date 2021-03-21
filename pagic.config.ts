@@ -24,15 +24,15 @@ export default {
     '/': [
       'introduction/README.md',
       {
-        link: 'test_pages/README.md',
-        children: ['test_pages/markdown_test.md', 'test_pages/front_matter.md', 'test_pages/react_hooks_test.tsx'],
+        link: 'technology/README.md',
+        children: ['technology/vue3.md'],
       },
       {
-        text: 'Folder',
+        text: 'Life',
         children: [
-          'folder/foo.md',
+          'life/guitar.md',
           {
-            text: 'Custom sidebar text',
+            text: '',
             link: 'folder/bar.md'
           }
         ]
