@@ -1,18 +1,12 @@
 import projectConfig from '/shapers/pagic.config.js';
-import ReactHooksTest from './react_hooks_test_content.js';
+import ReactHooksTest from './react_content.js';
 export default {
-    'prev': {
-        "text": "Front matter test",
-        "link": "test_pages/front_matter_test.html"
-    },
-    'next': {
-        "text": "Foo",
-        "link": "folder/foo.html"
-    },
+    'prev': undefined,
+    'next': undefined,
     config: { "root": "/", ...projectConfig, branch: 'main' },
-    'pagePath': "test_pages/react_hooks_test.tsx",
+    'pagePath': "technology/react.tsx",
     'layoutPath': "_layout.tsx",
-    'outputPath': "test_pages/react_hooks_test.html",
+    'outputPath': "technology/react.html",
     'title': "React hooks test",
     'content': React.createElement(ReactHooksTest, { config: {
             branch: 'main',
@@ -63,21 +57,19 @@ export default {
                     'introduction/README.md',
                     {
                         children: [
-                            'test_pages/markdown_test.md',
-                            'test_pages/front_matter.md',
-                            'test_pages/react_hooks_test.tsx'
+                            'technology/vue3.md'
                         ],
-                        link: 'test_pages/README.md'
+                        link: 'technology/README.md'
                     },
                     {
                         children: [
-                            'folder/foo.md',
+                            'life/guitar.md',
                             {
                                 link: 'folder/bar.md',
-                                text: 'Custom sidebar text'
+                                text: ''
                             }
                         ],
-                        text: 'Folder'
+                        text: 'Life'
                     }
                 ]
             },
@@ -89,7 +81,7 @@ export default {
                 editOnGitHub: true
             },
             watch: false
-        }, content: null, head: null, layoutPath: "_layout.tsx", outputPath: "test_pages/react_hooks_test.html", pagePath: "test_pages/react_hooks_test.tsx", script: null, title: "React hooks test" }),
+        }, content: null, head: null, layoutPath: "_layout.tsx", outputPath: "technology/react.html", pagePath: "technology/react.tsx", script: null, title: "React hooks test" }),
     'head': null,
     'script': React.createElement(React.Fragment, null,
         React.createElement("script", { src: "https://cdn.pagic.org/react@16.13.1/umd/react.production.min.js" }),
@@ -102,39 +94,28 @@ export default {
             "pagePath": "introduction/README.md"
         },
         {
-            "link": "test_pages/index.html",
+            "link": "technology/index.html",
             "children": [
                 {
-                    "text": "Markdown test",
-                    "link": "test_pages/markdown_test.html",
-                    "pagePath": "test_pages/markdown_test.md"
-                },
-                {
-                    "text": "Front matter test",
-                    "link": "test_pages/front_matter_test.html",
-                    "pagePath": "test_pages/front_matter.md"
-                },
-                {
-                    "text": "React hooks test",
-                    "link": "test_pages/react_hooks_test.html",
-                    "pagePath": "test_pages/react_hooks_test.tsx"
+                    "text": "Vue3 + TypeScript",
+                    "link": "technology/vue3.html",
+                    "pagePath": "technology/vue3.md"
                 }
             ],
-            "pagePath": "test_pages/README.md",
-            "text": "Vue3 + Ts"
+            "pagePath": "technology/README.md",
+            "text": "Technology"
         },
         {
-            "text": "Folder",
+            "text": "Life",
             "children": [
                 {
-                    "text": "Foo",
-                    "link": "folder/foo.html",
-                    "pagePath": "folder/foo.md"
+                    "text": "Guitar",
+                    "link": "life/guitar.html",
+                    "pagePath": "life/guitar.md"
                 },
                 {
-                    "text": "Custom sidebar text",
-                    "link": "folder/bar.html",
-                    "pagePath": "folder/bar.md"
+                    "text": "",
+                    "link": "folder/bar.md"
                 }
             ]
         }

@@ -2,8 +2,8 @@ import projectConfig from '/shapers/pagic.config.js';
 export default {
     'prev': undefined,
     'next': {
-        "link": "test_pages/index.html",
-        "text": "Vue3 + Ts"
+        "link": "technology/index.html",
+        "text": "Technology"
     },
     config: { "root": "/", ...projectConfig, branch: 'main' },
     'pagePath': "introduction/README.md",
@@ -43,39 +43,28 @@ export default {
             "pagePath": "introduction/README.md"
         },
         {
-            "link": "test_pages/index.html",
+            "link": "technology/index.html",
             "children": [
                 {
-                    "text": "Markdown test",
-                    "link": "test_pages/markdown_test.html",
-                    "pagePath": "test_pages/markdown_test.md"
-                },
-                {
-                    "text": "Front matter test",
-                    "link": "test_pages/front_matter_test.html",
-                    "pagePath": "test_pages/front_matter.md"
-                },
-                {
-                    "text": "React hooks test",
-                    "link": "test_pages/react_hooks_test.html",
-                    "pagePath": "test_pages/react_hooks_test.tsx"
+                    "text": "Vue3 + TypeScript",
+                    "link": "technology/vue3.html",
+                    "pagePath": "technology/vue3.md"
                 }
             ],
-            "pagePath": "test_pages/README.md",
-            "text": "Vue3 + Ts"
+            "pagePath": "technology/README.md",
+            "text": "Technology"
         },
         {
-            "text": "Folder",
+            "text": "Life",
             "children": [
                 {
-                    "text": "Foo",
-                    "link": "folder/foo.html",
-                    "pagePath": "folder/foo.md"
+                    "text": "Guitar",
+                    "link": "life/guitar.html",
+                    "pagePath": "life/guitar.md"
                 },
                 {
-                    "text": "Custom sidebar text",
-                    "link": "folder/bar.html",
-                    "pagePath": "folder/bar.md"
+                    "text": "",
+                    "link": "folder/bar.md"
                 }
             ]
         }

@@ -3,7 +3,7 @@ export default {
     'prev': null,
     'next': null,
     config: { "root": "/", ...projectConfig, branch: 'main' },
-    'pagePath': "test_pages/front_matter.md",
+    'pagePath': "technology/front.md",
     'layoutPath': "_layout.tsx",
     'outputPath': "test_pages/front_matter_test.html",
     'title': "Front matter test",
@@ -23,10 +23,11 @@ export default {
     'toc': null,
     'author': "ink-song",
     'contributors': [
-        "ink-song"
+        "ink-song",
+        "shaper"
     ],
     'date': "2021-03-05T01:33:36.000Z",
-    'updated': null,
+    'updated': "2021-03-21T01:49:46.000Z",
     'excerpt': "This is a front matter test page. The front matter content outputPath: test_pages/front_matter_test.html title: Front matter test toc: null prev: null next: null ",
     'cover': undefined,
     'sidebar': [
@@ -36,39 +37,28 @@ export default {
             "pagePath": "introduction/README.md"
         },
         {
-            "link": "test_pages/index.html",
+            "link": "technology/index.html",
             "children": [
                 {
-                    "text": "Markdown test",
-                    "link": "test_pages/markdown_test.html",
-                    "pagePath": "test_pages/markdown_test.md"
-                },
-                {
-                    "text": "Front matter test",
-                    "link": "test_pages/front_matter_test.html",
-                    "pagePath": "test_pages/front_matter.md"
-                },
-                {
-                    "text": "React hooks test",
-                    "link": "test_pages/react_hooks_test.html",
-                    "pagePath": "test_pages/react_hooks_test.tsx"
+                    "text": "Vue3 + TypeScript",
+                    "link": "technology/vue3.html",
+                    "pagePath": "technology/vue3.md"
                 }
             ],
-            "pagePath": "test_pages/README.md",
-            "text": "Vue3 + Ts"
+            "pagePath": "technology/README.md",
+            "text": "Technology"
         },
         {
-            "text": "Folder",
+            "text": "Life",
             "children": [
                 {
-                    "text": "Foo",
-                    "link": "folder/foo.html",
-                    "pagePath": "folder/foo.md"
+                    "text": "Guitar",
+                    "link": "life/guitar.html",
+                    "pagePath": "life/guitar.md"
                 },
                 {
-                    "text": "Custom sidebar text",
-                    "link": "folder/bar.html",
-                    "pagePath": "folder/bar.md"
+                    "text": "",
+                    "link": "folder/bar.md"
                 }
             ]
         }
