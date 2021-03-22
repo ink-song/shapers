@@ -11,7 +11,7 @@
   </script>
 </head><body><header><h1 class="hide_on_mobile"><a href="/shapers/">Shaper&#x27;s Docs</a></h1><nav><ul><li class="show_on_mobile flex_center"><a class="czs-menu-l" href="#" style="background-image:url(&quot;/shapers/assets/czs-menu-l.svg&quot;)"></a></li><li class="show_on_mobile"><h1 class="mobile_title"><a href="/shapers/">Shaper&#x27;s Docs</a></h1></li><li class="hide_on_mobile"><a href="/shapers/introduction/index.html">It&#x27;s me</a></li><li style="flex-grow:1"></li><li class="hide_on_mobile"><a href="/shapers/about/index.html">About</a></li><li class="flex_center"><a class="czs-github-logo" href="https://github.com/ink-song/shapers.githup.io" target="_blank" style="background-image:url(&quot;/shapers/assets/czs-github-logo.svg&quot;)"></a></li><li class="toggle_dark flex_center"><span class="czs-sun" style="background-image:url(&quot;/shapers/assets/czs-sun.svg&quot;)"></span><span class="czs-sun-l" style="background-image:url(&quot;/shapers/assets/czs-sun-l.svg&quot;)"></span><span class="czs-moon" style="background-image:url(&quot;/shapers/assets/czs-moon.svg&quot;)"></span><span class="czs-moon-l" style="background-image:url(&quot;/shapers/assets/czs-moon-l.svg&quot;)"></span></li></ul></nav></header><aside class="sidebar"><ol class="list_style_none"><li class=""><a href="/shapers/introduction/index.html" class="nav_link">Introduction</a></li><li class="unfold"><a href="/shapers/technology/index.html" class="nav_link">Technology<span class="czs-angle-up-l" style="background-image:url(&quot;/shapers/assets/czs-angle-up-l.svg&quot;)"></span><span class="czs-angle-down-l" style="background-image:url(&quot;/shapers/assets/czs-angle-down-l.svg&quot;)"></span></a><ol class="list_style_none" style="height:auto"><li class=""><a href="/shapers/technology/vue3.html" class="nav_link active">Vue3 + TypeScript</a></li></ol></li><li class="unfold"><a href="#" class="nav_link no_link">Life<span class="czs-angle-up-l" style="background-image:url(&quot;/shapers/assets/czs-angle-up-l.svg&quot;)"></span><span class="czs-angle-down-l" style="background-image:url(&quot;/shapers/assets/czs-angle-down-l.svg&quot;)"></span></a><ol class="list_style_none" style="height:auto"><li class=""><a href="/shapers/life/guitar.html" class="nav_link">Guitar</a></li><li class=""><a href="/shapers/folder/bar.md" class="nav_link"></a></li></ol></li></ol></aside><section class="main"><div class="main_article"><article><h1>Vue3 + TypeScript</h1>
 <p>使用Vue3+ TypeScript打造一个企业级组件库</p>
-<h2 id="%E8%AF%BE%E7%A8%8B%E5%AE%89%E6%8E%92">课程安排<a class="anchor" href="#%E8%AF%BE%E7%A8%8B%E5%AE%89%E6%8E%92">§</a></h2>
+<h2 id="1%E8%AF%BE%E7%A8%8B%E5%AE%89%E6%8E%92">1.课程安排<a class="anchor" href="#1%E8%AF%BE%E7%A8%8B%E5%AE%89%E6%8E%92">§</a></h2>
 <ol>
 <li>项目结构</li>
 <li>开发模式讲解</li>
@@ -22,30 +22,212 @@
 <li>完善功能开发</li>
 <li>自动化发布流程</li>
 </ol>
-<h3 id="text">Text<a class="anchor" href="#text">§</a></h3>
-<p>It's very easy to make some words <strong>bold</strong> and other words <em>italic</em> with Markdown. You can even <a href="http://google.com">link to Google!</a></p>
-<h3 id="lists">Lists<a class="anchor" href="#lists">§</a></h3>
-<p>Sometimes you want numbered lists:</p>
+<h2 id="2%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">2.启动项目准备工作<a class="anchor" href="#2%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">§</a></h2>
+<h3 id="1vue3%E6%9B%B4%E6%96%B0%E6%A6%82%E8%A7%88">1.Vue3更新概览<a class="anchor" href="#1vue3%E6%9B%B4%E6%96%B0%E6%A6%82%E8%A7%88">§</a></h3>
 <ol>
-<li>One</li>
-<li>Two</li>
-<li>Three</li>
+<li><a href="https://github.com/vuejs/rfcs">vue RFCS</a></li>
+<li>slot Api 的变化
+<ol>
+<li>可通过#header 代表具名插槽</li>
 </ol>
-<p>Sometimes you want bullet points:</p>
+</li>
+<li>全局 Api的变化
+<ol>
+<li>直接通过import 导入即可</li>
+</ol>
+</li>
+<li>Compontent-Api</li>
+</ol>
+<h3 id="2%E4%BD%BF%E7%94%A8vue-cli%E5%88%9B%E5%BB%BAts%E9%A1%B9%E7%9B%AE">2.使用vue-cli创建TS项目<a class="anchor" href="#2%E4%BD%BF%E7%94%A8vue-cli%E5%88%9B%E5%BB%BAts%E9%A1%B9%E7%9B%AE">§</a></h3>
+<ol>
+<li>安装vue-cli<pre class="language-autoit"><code class="language-autoit">cnpm i <span class="token operator">-</span>g <span class="token variable">@vue</span><span class="token operator">/</span>cli
+</code></pre>
+</li>
+<li>创建项目<pre class="language-autoit"><code class="language-autoit">vue create project
+</code></pre>
+</li>
+<li>配置项目（TS版本）
+<img src="./imgaes/config.png" alt="Image of Yaktocat"></li>
+</ol>
+<h3 id="3%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7prettier">3.格式化工具prettier<a class="anchor" href="#3%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7prettier">§</a></h3>
+<ol>
+<li>在项目中创建.prettierrc文件</li>
+<li>配置<pre class="language-autoit"><code class="language-autoit">{
+   <span class="token string">"semi"</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>不需要分号<span class="token punctuation">)</span>
+   <span class="token string">"singleQuote"</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> （单引号）
+   <span class="token string">"arrowParens"</span><span class="token punctuation">:</span> <span class="token string">"always"</span><span class="token punctuation">,</span> （剪头函数需要（））
+   <span class="token string">"trailingComma"</span><span class="token punctuation">:</span> <span class="token string">"all"</span> （结尾以<span class="token string">','</span>结束）
+ }
+</code></pre>
+</li>
+<li>使用
+<ol>
+<li>打开设置， 搜索formatter，</li>
+<li>勾选 Editor: Format On Save 即可（在工作区而不是在user）</li>
+</ol>
+</li>
+</ol>
+<h3 id="4h%E5%87%BD%E6%95%B0%E7%9A%84%E8%AF%A6%E6%83%85%E8%A7%A3%E8%AF%BB">4.h函数的详情解读<a class="anchor" href="#4h%E5%87%BD%E6%95%B0%E7%9A%84%E8%AF%A6%E6%83%85%E8%A7%A3%E8%AF%BB">§</a></h3>
+<ol>
+<li>可使用import的方式导入api<pre class="language-autoit"><code class="language-autoit">import { createApp<span class="token punctuation">,</span> h } from <span class="token string">'vue'</span>
+<span class="token function">createApp</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li>h函数类似react的createElement， 接收三个参数， h(节点类型，节点属性，children选项))<pre class="language-autoit"><code class="language-autoit"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+ <span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"/images/h.png"</span> alt<span class="token operator">=</span><span class="token string">""</span><span class="token operator">/</span><span class="token operator">></span>
+ <span class="token operator">&lt;</span>HelloWorld msg<span class="token operator">=</span><span class="token string">"xasdadas"</span> <span class="token punctuation">:</span>age<span class="token operator">=</span><span class="token string">"12"</span>  <span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+使用h函数可转换成如下代码
+<span class="token keyword">const</span> img <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'/images/h.png'</span><span class="token punctuation">)</span> <span class="token operator">/</span><span class="token operator">/</span> eslint<span class="token operator">-</span>disable<span class="token operator">-</span>line
+<span class="token keyword">const</span> App <span class="token operator">=</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span>{
+  <span class="token function">render</span><span class="token punctuation">(</span>{
+    return <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">,</span> {
+      id<span class="token punctuation">:</span> <span class="token string">'app'</span>
+    }<span class="token punctuation">,</span> <span class="token punctuation">[</span>
+      <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">,</span> {
+        alt<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+        src<span class="token punctuation">:</span> img
+      }<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token function">h</span><span class="token punctuation">(</span>HelloWord<span class="token punctuation">,</span> {
+        msg<span class="token punctuation">:</span> <span class="token string">'xasdadas'</span><span class="token punctuation">,</span>
+        age<span class="token punctuation">:</span> <span class="token number">12</span>
+      }<span class="token punctuation">)</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span>
+  }<span class="token punctuation">)</span>
+}<span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li>图片导入这块的可通过require的方式进行导入，如果遇到eslint的报错，可使用// eslint-diasble-line</li>
+<li>h函数源码解析
+<img src="./imgaes/h%E5%87%BD%E6%95%B0.png" alt="Image of Yaktocat"></li>
+<li>watchEffect注意点<pre class="language-autoit"><code class="language-autoit"><span class="token function">watchEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> {
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>h<span class="token punctuation">.</span>value<span class="token punctuation">)</span> <span class="token operator">/</span><span class="token operator">/</span>只监听这个h的值的变化
+}<span class="token punctuation">)</span>
+</code></pre>
+</li>
+</ol>
+<h3 id="5%E4%BD%BF%E7%94%A8jsx%E5%BC%80%E5%8F%91vue3%E7%BB%84%E4%BB%B6">5.使用jsx开发vue3组件<a class="anchor" href="#5%E4%BD%BF%E7%94%A8jsx%E5%BC%80%E5%8F%91vue3%E7%BB%84%E4%BB%B6">§</a></h3>
+<ol>
+<li>如何改造
+<ol>
+<li>下载依赖</li>
+</ol>
+<pre class="language-autoit"><code class="language-autoit">yarn add <span class="token variable">@vue</span><span class="token operator">/</span>babel<span class="token operator">-</span>plugin<span class="token operator">-</span>jsx <span class="token operator">-</span>D
+
+</code></pre>
+<ol start="2">
+<li>在babel.config.js中配置</li>
+</ol>
+<pre class="language-autoit"><code class="language-autoit">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> {
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"@vue/babel-plugin-jsx"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+}
+</code></pre>
+<ol start="3">
+<li>创建一个.tsx结尾的文件</li>
+</ol>
+<pre class="language-autoit"><code class="language-autoit">import { defineComponent<span class="token punctuation">,</span> reactive } from <span class="token string">'vue'</span>
+import HelloWord from <span class="token string">'./HelloWorld'</span>
+function <span class="token function">renderHelloWord</span><span class="token punctuation">(</span>num<span class="token punctuation">:</span> number<span class="token punctuation">)</span> {
+  return <span class="token operator">&lt;</span>HelloWord age<span class="token operator">=</span>{num} <span class="token operator">/</span><span class="token operator">></span>
+}
+export <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span>{
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> {
+    return <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> {
+      <span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span>{
+        name<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      }<span class="token punctuation">)</span>
+      return <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">></span>
+          {<span class="token function">renderHelloWord</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span>}
+          <span class="token operator">&lt;</span>h1<span class="token operator">></span><span class="token number">1231</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+          <span class="token operator">&lt;</span>p<span class="token operator">></span>{state<span class="token punctuation">.</span>name}<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+      <span class="token punctuation">)</span>
+    }
+  }<span class="token punctuation">,</span>
+}<span class="token punctuation">)</span>
+
+</code></pre>
+</li>
+<li>使用tsx的优势
 <ul>
-<li>Start a line with a star</li>
-<li>Profit!</li>
-</ul>
-<p>Alternatively,</p>
-<ul>
-<li>Dashes work just as well</li>
-<li>And if you have sub points, put two spaces before the dash or star:
-<ul>
-<li>Like this</li>
-<li>And this</li>
-</ul>
+<li>使用组件时，可提供eslint的格式化校验</li>
+<li>变量声明</li>
+<li>抽离共有逻辑,更加灵活<pre class="language-autoit"><code class="language-autoit">import { defineComponent } from <span class="token string">'vue'</span>
+<span class="token keyword">const</span> PropsType <span class="token operator">=</span> {
+  msg<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span> {
+    type<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>
+    required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  }<span class="token punctuation">,</span>
+} as <span class="token keyword">const</span>
+export <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span>{
+  props<span class="token punctuation">:</span> PropsType<span class="token punctuation">,</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> {
+    return <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>span<span class="token operator">></span>我是你<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+        {props<span class="token punctuation">.</span>age}
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span>
+  }<span class="token punctuation">,</span>
+}<span class="token punctuation">)</span>
+
+</code></pre>
 </li>
 </ul>
+</li>
+</ol>
+<h3 id="6ajv%E6%A0%A1%E9%AA%8Cjson-schema">6.ajv校验json-schema<a class="anchor" href="#6ajv%E6%A0%A1%E9%AA%8Cjson-schema">§</a></h3>
+<ul>
+<li>
+<ol>
+<li>下载依赖</li>
+</ol>
+<pre class="language-autoit"><code class="language-autoit">yarn add ajv <span class="token operator">-</span>D
+</code></pre>
+</li>
+<li>
+<ol start="2">
+<li>引入ajv</li>
+</ol>
+</li>
+</ul>
+<pre class="language-autoit"><code class="language-autoit"><span class="token operator">/</span><span class="token operator">*</span> eslint<span class="token operator">-</span>disable <span class="token operator">*</span><span class="token operator">/</span> 在typeScript中使用import会导致报错， 这使用eslint<span class="token operator">-</span>disable规避require的方式
+<span class="token keyword">const</span> Ajv <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'ajv'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">default</span>
+<span class="token keyword">const</span> ajv <span class="token operator">=</span> new <span class="token function">Ajv</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> schema <span class="token operator">=</span> {
+  type<span class="token punctuation">:</span> <span class="token string">'object'</span><span class="token punctuation">,</span>
+  properties<span class="token punctuation">:</span> {
+    name<span class="token punctuation">:</span> {
+      type<span class="token punctuation">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span>
+      minLength<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    }<span class="token punctuation">,</span>
+    age<span class="token punctuation">:</span> {
+      type<span class="token punctuation">:</span> <span class="token string">'number'</span><span class="token punctuation">,</span>
+    }<span class="token punctuation">,</span>
+    record<span class="token punctuation">:</span> {
+      type<span class="token punctuation">:</span> <span class="token string">'array'</span><span class="token punctuation">,</span>
+      items<span class="token punctuation">:</span> <span class="token punctuation">[</span>{
+          type<span class="token punctuation">:</span> <span class="token string">'string'</span>
+        }<span class="token punctuation">,</span>
+        {
+          type<span class="token punctuation">:</span> <span class="token string">'number'</span>
+        }<span class="token punctuation">,</span>
+      <span class="token punctuation">]</span>
+    }
+  }
+}
+<span class="token keyword">const</span> validate <span class="token operator">=</span> ajv<span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span>schema<span class="token punctuation">)</span>
+<span class="token keyword">const</span> valid <span class="token operator">=</span> <span class="token function">validate</span><span class="token punctuation">(</span>{
+  name<span class="token punctuation">:</span> <span class="token string">'21312311231asddada'</span><span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span> <span class="token number">11</span><span class="token punctuation">,</span>
+  record<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'sda'</span><span class="token punctuation">,</span> <span class="token number">12131</span><span class="token punctuation">]</span>
+}<span class="token punctuation">)</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>!valid<span class="token punctuation">)</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>validate<span class="token punctuation">.</span>errors<span class="token punctuation">)</span>
+
+</code></pre>
 <h3 id="images">Images<a class="anchor" href="#images">§</a></h3>
 <p>If you want to embed images, this is how you do it:</p>
 <p><img src="https://octodex.github.com/images/yaktocat.png" alt="Image of Yaktocat"></p>
@@ -132,4 +314,4 @@ s-271.3,567,-271.3,567c-38.7,80.7,-84,175,-136,283c-52,108,-89.167,185.3,-111.5,
 c-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1
 s-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26
 c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z
-M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19860999999999995em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">ϕ</span><span class="mclose"><span class="delimsizing size2">)</span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.93957em;"><span style="top:-3.3485500000000004em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8443142857142858em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">5</span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.38em;"><span class="pstrut" style="height:3.15em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.827em;"><span class="pstrut" style="height:3.15em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.69002em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:3.692383em;vertical-align:-2.201275em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.19358em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.91642em;"><span style="top:-2.4519800000000003em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0543142857142858em;"><span style="top:-2.229757142857143em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size1 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32544em;"><span style="top:-2.468em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">+</span><span class="minner mtight">⋯</span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.387em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9384399999999999em;"><span style="top:-2.93844em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">8</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.61533em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size1 size6"></span></span></span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9384399999999999em;"><span style="top:-2.93844em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">6</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2097642857142856em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">4</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3948549999999997em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.201275em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p></article><div class="prev_next"><a class="prev button" href="/shapers/technology/index.html">«  <!-- -->Technology</a><a class="next button" href="/shapers/life/guitar.html">Guitar<!-- -->  »</a></div></div><aside class="main_toc_container nav_link_container"><div class="main_toc"><nav class="toc"><ol><li><a href="#%E8%AF%BE%E7%A8%8B%E5%AE%89%E6%8E%92">课程安排</a><ol><li><a href="#text">Text</a></li><li><a href="#lists">Lists</a></li><li><a href="#images">Images</a></li><li><a href="#headers">Headers</a></li><li><a href="#quotes">Quotes</a></li><li><a href="#code">Code</a><ol></ol></li><li><a href="#tables">Tables</a></li></ol></li><li><a href="#extras">Extras</a><ol><li><a href="#tex-katex">TeX (KaTeX)</a></li></ol></li></ol></nav></div></aside></section><footer>Powered by <a href="https://github.com/xcatliu/pagic" target="_blank">Pagic</a></footer><div class="tools flex_center hide_on_mobile"><a class="czs-pen button" href="https://github.com/ink-song/shapers.githup.io/edit/main/./technology/vue3.md" target="_blank" style="background-image:url(&quot;/shapers/assets/czs-pen.svg&quot;)"></a><a class="czs-angle-up-l button" href="#" style="background-image:url(&quot;/shapers/assets/czs-angle-up-l.svg&quot;)"></a></div><script src="https://cdn.pagic.org/react@16.13.1/umd/react.production.min.js"></script><script src="https://cdn.pagic.org/react-dom@16.13.1/umd/react-dom.production.min.js"></script><script type="module" src="/shapers/index.js"></script></body></html>
+M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19860999999999995em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">ϕ</span><span class="mclose"><span class="delimsizing size2">)</span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.93957em;"><span style="top:-3.3485500000000004em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8443142857142858em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">5</span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.38em;"><span class="pstrut" style="height:3.15em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.827em;"><span class="pstrut" style="height:3.15em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.69002em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:3.692383em;vertical-align:-2.201275em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.19358em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.91642em;"><span style="top:-2.4519800000000003em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0543142857142858em;"><span style="top:-2.229757142857143em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size1 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32544em;"><span style="top:-2.468em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">+</span><span class="minner mtight">⋯</span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.387em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9384399999999999em;"><span style="top:-2.93844em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">8</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.61533em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size1 size6"></span></span></span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9384399999999999em;"><span style="top:-2.93844em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">6</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2097642857142856em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">4</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3948549999999997em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.201275em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p></article><div class="prev_next"><a class="prev button" href="/shapers/technology/index.html">«  <!-- -->Technology</a><a class="next button" href="/shapers/life/guitar.html">Guitar<!-- -->  »</a></div></div><aside class="main_toc_container nav_link_container"><div class="main_toc"><nav class="toc"><ol><li><a href="#1%E8%AF%BE%E7%A8%8B%E5%AE%89%E6%8E%92">1.课程安排</a></li><li><a href="#2%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">2.启动项目准备工作</a><ol><li><a href="#1vue3%E6%9B%B4%E6%96%B0%E6%A6%82%E8%A7%88">1.Vue3更新概览</a></li><li><a href="#2%E4%BD%BF%E7%94%A8vue-cli%E5%88%9B%E5%BB%BAts%E9%A1%B9%E7%9B%AE">2.使用vue-cli创建TS项目</a></li><li><a href="#3%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7prettier">3.格式化工具prettier</a></li><li><a href="#4h%E5%87%BD%E6%95%B0%E7%9A%84%E8%AF%A6%E6%83%85%E8%A7%A3%E8%AF%BB">4.h函数的详情解读</a></li><li><a href="#5%E4%BD%BF%E7%94%A8jsx%E5%BC%80%E5%8F%91vue3%E7%BB%84%E4%BB%B6">5.使用jsx开发vue3组件</a></li><li><a href="#6ajv%E6%A0%A1%E9%AA%8Cjson-schema">6.ajv校验json-schema</a></li><li><a href="#images">Images</a></li><li><a href="#headers">Headers</a></li><li><a href="#quotes">Quotes</a></li><li><a href="#code">Code</a><ol></ol></li><li><a href="#tables">Tables</a></li></ol></li><li><a href="#extras">Extras</a><ol><li><a href="#tex-katex">TeX (KaTeX)</a></li></ol></li></ol></nav></div></aside></section><footer>Powered by <a href="https://github.com/xcatliu/pagic" target="_blank">Pagic</a></footer><div class="tools flex_center hide_on_mobile"><a class="czs-pen button" href="https://github.com/ink-song/shapers.githup.io/edit/main/./technology/vue3.md" target="_blank" style="background-image:url(&quot;/shapers/assets/czs-pen.svg&quot;)"></a><a class="czs-angle-up-l button" href="#" style="background-image:url(&quot;/shapers/assets/czs-angle-up-l.svg&quot;)"></a></div><script src="https://cdn.pagic.org/react@16.13.1/umd/react.production.min.js"></script><script src="https://cdn.pagic.org/react-dom@16.13.1/umd/react-dom.production.min.js"></script><script type="module" src="/shapers/index.js"></script></body></html>
