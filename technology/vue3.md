@@ -2,7 +2,7 @@
 
 使用Vue3+ TypeScript打造一个企业级组件库
 
-## 1.课程安排
+## 1.目录结构
 
 1. 项目结构
 2. 开发模式讲解
@@ -159,8 +159,8 @@
       })
 
       ```
-
-### 6.ajv校验json-schema
+## 3.Json-schema标准和使用
+### 1.Ajv校验json-schema
 - 1. 下载依赖
   ```
   yarn add ajv -D
@@ -201,12 +201,106 @@ const valid = validate({
 if (!valid) console.log(validate.errors)
 
 ```
+ 3. format自定义ajv
+  ```
+  const Ajv = require('ajv').default
+  const ajv = new Ajv()
+  ajv.addFormat('test', (data) => {
+    return data === 'hhh'
+  })
 
-### Images
+  name: {
+    type: 'string',
+    minLength: 10,
+    format: 'tset'
+  },
 
-If you want to embed images, this is how you do it:
+  ```
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+  ### 2.Ajv自定义关键字
+      1. 使用validate
+   ```
+      /* eslint-disable */
+    const Ajv = require('ajv').default
+    const ajv = new Ajv()
+
+    const schema = {
+      type: 'object',
+      properties: {
+        name: {
+          type: 'string',
+          // minLength: 10,
+          // format: 'test',
+          test: false,
+        },
+        age: {
+          type: 'number',
+        },
+        record: {
+          type: 'array',
+          items: [{
+              type: 'string'
+            },
+            {
+              type: 'number'
+            },
+          ]
+        }
+      }
+    }
+    // 自定义关键字
+    ajv.addKeyword('test', {
+      validate(schema, data) {
+        console.log(schema, data)
+        if (schema === true) return true
+        else return data.length === 6
+        return true
+      }
+    })
+    const validate = ajv.compile(schema)
+    const valid = validate({
+      name: 'hhhs22',
+      age: 11,
+      record: ['sda', 12131]
+    })
+    if (!valid) console.log(validate.errors)
+   ```
+      1. 使用compile
+   ```
+   ajv.addKeyword('test', {
+    compile(sche, parentSchema) {
+      console.log(sche, parentSchema)
+      return () => true
+      }
+    })
+    需要返回函数
+   ```
+      1. 使用mataSchema
+   ```
+   ajv.addKeyword('test', {
+    metaSchema: {
+      type: 'string'
+      }
+    })
+    会检测每一个校验的值是否为string类型
+   ```
+
+### 3.Ajv自定义错误信息
+```
+  ajv.addKeyword('test', {
+    validate: function fun(schema, data) {
+      fun.errors = [
+        {
+          keyword: 'test',
+          message: '自定义错误信息'
+        }
+      ]
+    } 
+  }
+
+```
+
+## 4.开发组件库的主流程
 
 ### Headers
 

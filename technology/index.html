@@ -1,0 +1,106 @@
+
+<!-- base file -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- common -->
+    <link rel="shortcut icon" href="/static/painter/images/favicon.ico" type="image/x-icon" />
+
+    
+  <title>Scifi-block-connections</title>
+  <!-- 控制按钮样式 -->
+	<link rel="stylesheet" type="text/css" href="./static//painter/css/paint.css">
+    <script type="text/javascript">
+        var hasTHREE = false;
+        window.setTimeout(function(){
+            if( !window.THREE ) {
+                var script = document.createElement('script');    
+                    script.src = "/static/painter/js/three.min.js";
+                    script.onload = function(){
+                        console.log('threejs loaded')
+                        startPaint();
+                        hasTHREE = true;
+                    };
+                document.body.appendChild(script);
+            }
+        }, 1000);
+
+        function cdnThreeLoaded() {
+            if( !hasTHREE ) {
+                console.log('THREE.js loaded')
+                startPaint();
+                hasTHREE = true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+</div>
+	<div id="container">
+		<div id="loading_cover" style="display:none">
+			<div id="loading">
+				<div id="indicator">20%</div>
+				<div id="progressbar">
+					<div id="progress"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="monitor_panel" style="display:none"></div>
+
+	<div id="control_wrapper">
+		<div class="wrapper">
+			<div class="column-left">
+				<div class="paint-title"></div>
+				<div class="ctrl-btn-group"></div>
+				<div class="ctrl-btn" id="frame_control" ><span class="icon icon-pause"></span><canvas width='44' height='44' id='frameMeterCanvas'></canvas></div>
+				<div class="ctrl-btn" id="reset_pattern" ><span class="icon icon-refresh-pattern"></span><span class="text">Refresh Pattern</span></div>
+				<div class="ctrl-btn" id="shuffle_color" ><span class="icon icon-refresh-color"></span><span class="text"></span>Refresh Color</div>
+			</div>
+		</div>
+	</div>
+
+    <script type="x-shader/x-vertex" id="init_vertex_shader">
+		void main() {
+			gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+		}
+	</script>
+
+	<script type="x-shader/x-fragment" id="init_fragment_shader" >
+		void main() {
+			gl_FragColor = vec4( 0.0 );
+		}
+	</script>
+
+	<script type="text/javascript">
+		var palette_list_raw = '[[&quot;2E04EA&quot;, &quot;3418F7&quot;, &quot;2B4FF0&quot;, &quot;1A8BFF&quot;, &quot;59B5FF&quot;, &quot;6BBDFF&quot;], [&quot;2000FF&quot;, &quot;452BFF&quot;, &quot;614BFF&quot;, &quot;4B68FF&quot;, &quot;1194FF&quot;, &quot;30A2FF&quot;]]';
+		var palette_list = JSON.parse( palette_list_raw.replace(/\&quot;/g, '\"') );
+		var instance = '01';
+		var paint_title = 'Scifi-block-connections'.replace(/-/g,' ');
+		var __paint_script_path__ = "/technology/static/js/scifi-block-connections.js"
+		var __rtt_glsl_directory__ = "/technology/static/painter/glsl/";
+		var __geometry_directory__ = "/technology/static/painter/paintgeometries/";
+		var __textures_directory__ = "/technology/static/painter/painttextures/";
+		var __currentPath__ = window.location.href;
+
+		window.startPaint = function(){
+			var script = document.createElement('script');    
+		    script.src = "/technology/static/js/build.js";
+		    script.onload = function() {
+		    	loadPaintData( initPaint, animate );
+          }
+		    document.body.appendChild(script);			
+		};
+	</script>
+</div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js" onload="cdnThreeLoaded()"></script>
+    <script src="./static/js/query.cookie.js"></script>
+</body>
+
+</html>
