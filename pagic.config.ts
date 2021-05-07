@@ -36,6 +36,16 @@ export default {
             link: 'folder/bar.md'
           }
         ]
+      },
+      {
+        text: 'Study',
+        children: [
+          'study/HowWeLearn.md',
+          {
+            text: '',
+            link: 'folder/bar.md'
+          }
+        ]
       }
     ],
   },
