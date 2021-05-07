@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?c4gigw');
+  src:  url('../fonts/icomoon.eot?c4gigw#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?c4gigw') format('truetype'),
+    url('../fonts/icomoon.woff?c4gigw') format('woff'),
+    url('../fonts/icomoon.svg?c4gigw#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-selected:before {
+  content: "\e900";
+}
+
+
+.m-b-200 {
+  margin-bottom: 200px;
+}
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'SF UI Display',sans-serif;
+	/*font-size: 0;*/
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+  margin-top: 32px;
+  font-size: 24px;
+  line-height: 64px;
+}
+
+p {
+  margin: 4px 0 4px;
+  font-size: 20px;
+}
+
+p a {
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+  border-bottom: 2px solid #000;
+}
+
+.wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 1200px;
+}
+
+
+/* Header -------------------- -------------------- -------------------- */
+.header {
+  position: relative;
+  height: 60px;
+  background: #000;  
+}
+
+.header .logo {
+  float: left;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  width: 108px;
+  height: 54px;
+  background-image: url(../images/logo.gif);
+  background-size: cover;
+}
+
+.header .menu {
+  float: right;
+  display: inline-block;
+}
+.header .menu .entry {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 72px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+/* Footer -------------------- -------------------- -------------------- */
+.footer {
+  text-align: center;
+  background: #000;
+}
+.footer .info{
+  margin: 80px auto 0;
+  color: rgba(255,255,255,0.4);
+  font-size: 14px;
+  line-height: 48px;
+  text-align: center;
+}
+.footer .info a {
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
