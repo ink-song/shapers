@@ -1,4 +1,4 @@
-import projectConfig from '/shapers/pagic.config.js';
+import projectConfig from '/pagic.config.js';
 export default {
     'prev': undefined,
     'next': undefined,
@@ -15,7 +15,7 @@ export default {
     'script': React.createElement(React.Fragment, null,
         React.createElement("script", { src: "https://cdn.pagic.org/react@16.13.1/umd/react.production.min.js" }),
         React.createElement("script", { src: "https://cdn.pagic.org/react-dom@16.13.1/umd/react-dom.production.min.js" }),
-        React.createElement("script", { src: "/shapers/index.js", type: "module" })),
+        React.createElement("script", { src: "/index.js", type: "module" })),
     'contentTitle': undefined,
     'contentBody': React.createElement("article", { dangerouslySetInnerHTML: {
             __html: '<p><img src="./images/tobeaman.png" alt="to be a man"></p>\n<pre><code>风吹落枯叶，枯叶滋养土壤，肥沃的土壤帮助果实，缓慢而坚定的生长\n</code></pre>'
