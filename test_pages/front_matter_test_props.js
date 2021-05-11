@@ -61,6 +61,20 @@ export default {
                     "link": "folder/bar.md"
                 }
             ]
+        },
+        {
+            "text": "Study",
+            "children": [
+                {
+                    "text": "How We Learn",
+                    "link": "study/HowWeLearn.html",
+                    "pagePath": "study/HowWeLearn.md"
+                },
+                {
+                    "text": "",
+                    "link": "folder/bar.md"
+                }
+            ]
         }
     ]
 };

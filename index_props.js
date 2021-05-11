@@ -8,7 +8,7 @@ export default {
     'outputPath': "index.html",
     'title': undefined,
     'content': React.createElement("article", { dangerouslySetInnerHTML: {
-            __html: ''
+            __html: '<p>adasdasd</p>'
         } }),
     'head': React.createElement(React.Fragment, null,
         React.createElement("link", { crossOrigin: "anonymous", href: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css", integrity: "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X", rel: "stylesheet" })),
@@ -18,7 +18,7 @@ export default {
         React.createElement("script", { src: "/shapers/index.js", type: "module" })),
     'contentTitle': undefined,
     'contentBody': React.createElement("article", { dangerouslySetInnerHTML: {
-            __html: ''
+            __html: '<p>adasdasd</p>'
         } }),
     'toc': null,
     'author': "ink-song",
@@ -27,8 +27,8 @@ export default {
         "shaper"
     ],
     'date': "2021-03-05T01:33:36.000Z",
-    'updated': "2021-03-20T02:50:58.000Z",
-    'excerpt': "",
+    'updated': "2021-05-10T11:44:33.000Z",
+    'excerpt': "adasdasd",
     'cover': undefined,
     'sidebar': [
         {
@@ -55,6 +55,20 @@ export default {
                     "text": "Guitar",
                     "link": "life/guitar.html",
                     "pagePath": "life/guitar.md"
+                },
+                {
+                    "text": "",
+                    "link": "folder/bar.md"
+                }
+            ]
+        },
+        {
+            "text": "Study",
+            "children": [
+                {
+                    "text": "How We Learn",
+                    "link": "study/HowWeLearn.html",
+                    "pagePath": "study/HowWeLearn.md"
                 },
                 {
                     "text": "",

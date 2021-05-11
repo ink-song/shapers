@@ -4,7 +4,10 @@ export default {
         "text": "Vue3 + TypeScript",
         "link": "technology/vue3.html"
     },
-    'next': undefined,
+    'next': {
+        "text": "How We Learn",
+        "link": "study/HowWeLearn.html"
+    },
     config: { "root": "/", ...projectConfig, branch: 'main' },
     'pagePath': "life/guitar.md",
     'layoutPath': "_layout.tsx",
@@ -67,6 +70,20 @@ export default {
                     "text": "Guitar",
                     "link": "life/guitar.html",
                     "pagePath": "life/guitar.md"
+                },
+                {
+                    "text": "",
+                    "link": "folder/bar.md"
+                }
+            ]
+        },
+        {
+            "text": "Study",
+            "children": [
+                {
+                    "text": "How We Learn",
+                    "link": "study/HowWeLearn.html",
+                    "pagePath": "study/HowWeLearn.md"
                 },
                 {
                     "text": "",
