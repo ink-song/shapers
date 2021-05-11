@@ -302,17 +302,61 @@ if (!valid) console.log(validate.errors)
 
 ## 4.开发组件库的主流程
 
-### Headers
+### 开始实现schema
 
-Sometimes it's useful to have different levels of headings to structure your documents. Start lines with a `#` to create headings. Multiple `##` in a row denote smaller heading sizes.
+#### 一般会创建types文件夹来声明类型
+```
+export enum SchemaTypes {
+  'NUMBER' = 'number',
+  'STRING' = 'string',
+  'INTEGER' = 'interger',
+  'OBJECT' = 'object',
+  'ARRAY' = 'array',
+  'BOOLEAN' = 'boolean',
+}
 
-You can use one `#` all the way up to `######` six for different heading sizes.
+type SchemaRef = { $ref: string }
+export interface Schema {
+  type: SchemaTypes | string
+  const?: any
+  format?: string
+  default?: any
+  properties?: {
+    [key: string]: Schema | { $ref: string }
+  }
+  item?: Schema | Schema[] | SchemaRef
+  dependcecies?: {
+    [key: string]: string[] | Schema | SchemaRef
+  }
+  oneOf?: Schema[]
+  // vjsf?: VueJsonSchemaConfig
+  required?: string[]
+  enum?: any[]
+  enumKeyvalue?: any[]
+  additionalProperties?: any
+  additionalItems?: Schema
+}
 
-### Quotes
+```
+### 使用vue-jss 可实现css的js化
+```
+import { createUseStyles } from 'vue-jss'
+const useStyles = createUseStyles({
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%',
+    width: '1200px',
+    margin: '0 auto',
+  }
+})
 
-If you'd like to quote someone, use the > character before the line:
+const classesRef = useStyles()
+const classes = classesRef.value
+<div class={classes.container}>
+</div>
+```
 
-> Coffee. The finest organic suspension ever devised... I beat the Borg with it.
 > - Captain Janeway
 
 ### Code
