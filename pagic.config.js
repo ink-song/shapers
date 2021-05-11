@@ -10,11 +10,11 @@ export default {
     nav: [
         {
             text: "It's me",
-            link: '/introduction/index.html',
+            link: '/shapers/introduction/index.html',
         },
         {
             text: 'About',
-            link: '/about/index.html',
+            link: '/shapers//about/index.html',
             align: 'right',
         },
     ],
