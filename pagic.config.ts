@@ -3,7 +3,7 @@
 export default {
   srcDir: '.',
   exclude: [],
-  root: '/shapers/',
+  root: '/',
   theme: 'docs',
   plugins: ['clean', 'init', 'md', 'tsx', 'sidebar', 'prev_next', 'ga', 'script', 'layout', 'out'],
   title: "Shaper's Docs",
@@ -11,11 +11,11 @@ export default {
   nav: [
     {
       text: "It's me",
-      link: '/shapers/introduction/index.html',
+      link: '/introduction/index.html',
     },
     {
       text: 'About',
-      link: '/shapers/about/index.html',
+      link: '/about/index.html',
       align: 'right',
     },
   ],
