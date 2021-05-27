@@ -78,6 +78,15 @@ export default {
             ]
         },
         {
+            "text": "Interview",
+            "children": [
+                {
+                    "text": "",
+                    "link": "folder/bar.md"
+                }
+            ]
+        },
+        {
             "text": "Study",
             "children": [
                 {

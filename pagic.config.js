@@ -37,6 +37,16 @@ export default {
                 ]
             },
             {
+                text: 'Interview',
+                children: [
+                    'interview/btyedance.md',
+                    {
+                        text: '',
+                        link: 'folder/bar.md'
+                    }
+                ]
+            },
+            {
                 text: 'Study',
                 children: [
                     'study/HowWeLearn.md',
