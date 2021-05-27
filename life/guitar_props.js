@@ -5,8 +5,8 @@ export default {
         "link": "technology/vue3.html"
     },
     'next': {
-        "text": "How We Learn",
-        "link": "study/HowWeLearn.html"
+        "text": "字节跳动面试进阶",
+        "link": "interview/btyedance.html"
     },
     config: { "root": "/", ...projectConfig, branch: 'main' },
     'pagePath': "life/guitar.md",
@@ -81,8 +81,14 @@ export default {
             "text": "Interview",
             "children": [
                 {
+                    "text": "字节跳动面试进阶",
+                    "link": "interview/btyedance.html",
+                    "pagePath": "interview/btyedance.md"
+                },
+                {
                     "text": "",
-                    "link": "folder/bar.md"
+                    "link": "interview/btyedance.html",
+                    "pagePath": "interview/btyedance.md"
                 }
             ]
         },
@@ -96,7 +102,8 @@ export default {
                 },
                 {
                     "text": "",
-                    "link": "folder/bar.md"
+                    "link": "study/HowWeLearn.html",
+                    "pagePath": "study/HowWeLearn.md"
                 }
             ]
         }

@@ -42,7 +42,7 @@ export default {
                     'interview/btyedance.md',
                     {
                         text: '',
-                        link: 'folder/bar.md'
+                        link: 'interview/btyedance.md'
                     }
                 ]
             },
@@ -52,7 +52,7 @@ export default {
                     'study/HowWeLearn.md',
                     {
                         text: '',
-                        link: 'folder/bar.md'
+                        link: 'study/HowWeLearn.md'
                     }
                 ]
             }
