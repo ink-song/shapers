@@ -1,6 +1,6 @@
-# 字节跳动面试进阶
+# Btyedance
 
- #### [HTTP和HTTPS](https://www.huaweicloud.com/articles/d81c7888a0713fca6141423cefb8661d.html)
+ ### [HTTP和HTTPS](https://www.huaweicloud.com/articles/d81c7888a0713fca6141423cefb8661d.html)
    + HTTP
      + Hyper Text Transfer Protocol（超文本传输协议）
      + 客户端浏览器和web服务器之间的应用层通信协议
