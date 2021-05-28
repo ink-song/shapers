@@ -72,7 +72,7 @@ export default {
             "text": "Interview",
             "children": [
                 {
-                    "text": "字节跳动面试进阶",
+                    "text": "Btyedance",
                     "link": "interview/btyedance.html",
                     "pagePath": "interview/btyedance.md"
                 },
